@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrus Pinto | Portfolio 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-deep: #0a0f1d;
+            --sidebar-bg: #111827;
+            --accent-primary: #6366f1; /* Indigo */
+            --accent-secondary: #06b6d4; /* Cyan */
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --card-glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-main); 
+            background: var(--bg-deep); 
+            padding: 40px 20px;
+        }
+
+     .resume-container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            background: var(--sidebar-bg); 
+            border-radius: 24px; 
+            display: grid; 
+            grid-template-columns: 350px 1fr; 
+            overflow: hidden; 
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-glass);
+        }
+
+        aside { 
+            background: var(--sidebar-bg); 
+            padding: 50px 35px; 
+            border-right: 1px solid var(--border-glass);
+        }
+     .profile-avatar { 
+            width: 100px; height: 100px; 
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); 
+            border-radius: 22px; 
+            margin-bottom: 25px; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5em; font-weight: 800; color: #fff;
+            transform: rotate(-5deg);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+        h1 { font-size: 2.2em; letter-spacing: -1px; margin-bottom: 5px; background: linear-gradient(to right, #fff, var(--text-muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+     .role-tag { color: var(--accent-secondary); font-size: 0.85em; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; display: block; }
+        
+     .contact-group { margin-bottom: 35px; }
+     .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 0.9em; color: var(--text-muted); }
+     .contact-item a { color: var(--text-main); text-decoration: none; transition: 0.3s; }
+     .contact-item a:hover { color: var(--accent-primary); }
+
+     .skill-section { margin-top: 40px; }
+     .skill-header { font-size: 0.75em; font-weight: 800; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; border-left: 3px solid var(--accent-primary); padding-left: 10px; }
+     .skill-pill { display: inline-block; padding: 6px 12px; background: var(--card-glass); border: 1px solid var(--border-glass); border-radius: 8px; font-size: 0.8em; margin: 0 4px 8px 0; font-weight: 600; color: #e5e7eb; }
+     .skill-pill.pro { border-color: var(--accent-secondary); color: var(--accent-secondary); }
+
+        main { padding: 60px 50px; background: rgba(255,255,255,0.01); }
+     .section-wrap { margin-bottom: 50px; }
+        h2.section-title { font-size: 1.4em; margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+        h2.section-title::after { content: ""; height: 1px; flex-grow: 1; background: var(--border-glass); }
+
+     .objective-block { font-size: 1.2em; font-weight: 300; line-height: 1.8; color: #d1d5db; position: relative; }
+     .objective-block span { color: var(--accent-secondary); font-weight: 600; }
+
+     .timeline-item { position: relative; padding-left: 30px; border-left: 1px solid var(--border-glass); margin-bottom: 40px; }
+     .timeline-item::before { content: ""; position: absolute; left: -5px; top: 8px; width: 9px; height: 9px; background: var(--accent-secondary); border-radius: 50%; box-shadow: 0 0 10px var(--accent-secondary); }
+     .item-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+     .item-title { font-weight: 800; font-size: 1.1em; color: #fff; }
+     .item-meta { font-size: 0.85em; color: var(--accent-primary); font-weight: 700; }
+        
+        ul { list-style: none; margin-top: 10px; }
+        li { font-size: 0.95em; color: var(--text-muted); margin-bottom: 8px; padding-left: 15px; position: relative; }
+        li::before { content: "→"; position: absolute; left: 0; color: var(--accent-secondary); }
+
+     .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+     .cert-card { background: var(--card-glass); border: 1px solid var(--border-glass); padding: 15px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+
+     .contact-footer { background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); padding: 30px; border-radius: 20px; text-align: center; margin-top: 20px; }
+     .contact-footer p { font-weight: 800; color: #fff; margin-bottom: 15px; }
+     .btn-main { background: #fff; color: var(--bg-deep); padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 0.9em; transition: 0.3s; }
+     .btn-main:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        @media (max-width: 900px) {
+         .resume-container { grid-template-columns: 1fr; }
+            aside { border-right: none; border-bottom: 1px solid var(--border-glass); }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <aside>
+            <div class="profile-avatar">CP</div>
+            <h1>Cyrus Pinto</h1>
+            <span class="role-tag">Developer & Visionary</span>
+
+            <div class="contact-group">
+                <div class="contact-item">📍 Mangalore, KA</div>
+                <div class="contact-item">📞 <a href="tel:+918147720409">+91 8147720409</a></div>
+                <div class="contact-item">📧 <a href="mailto:pintocyrus@gmail.com">pintocyrus@gmail.com</a></div>
+                <div class="contact-item">💻 <a href="https://github.com/CYRUS-pinto/" target="_blank">GitHub Portfolio</a></div>
+                <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/cyrus-pinto-821a26397/" target="_blank">LinkedIn Profile</a></div>
+            </div>
+
+            <div class="skill-section">
+                <div class="skill-header">Professional Hard Skills</div>
+                <div class="skill-pill pro">C++ (High Perf)</div>
+                <div class="skill-pill pro">Python (Scripting)</div>
+                <div class="skill-pill pro">Robotics Logic</div>
+                <div class="skill-pill">HTML5 / CSS3</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">Azure Cloud</div>
+                <div class="skill-pill">DBMS / SQL</div>
+            </div>
+
+            <div class="skill-section">
+                <div class="skill-header">Strategic Soft Skills</div>
+                <div class="skill-pill">Analytical Problem Solving</div>
+                <div class="skill-pill">Rapid Software Acquisition</div>
+                <div class="skill-pill">Discipline & Time Management</div>
+                <div class="skill-pill">Resilient Work Ethic</div>
+                <div class="skill-pill">Adaptive Innovation Mindset</div>
+                <div class="skill-pill">Public Speaking</div>
+                <div class="skill-pill">Persistence</div>
+            </div>
+
+            <div class="skill-section">
+                <div class="skill-header">Languages</div>
+                <div class="skill-pill">English (Fluent)</div>
+                <div class="skill-pill">Hindi (Proficient)</div>
+            </div>
+        </aside>
+
+        <main>
+            <section class="section-wrap">
+                <h2 class="section-title">Mission Objective</h2>
+                <div class="objective-block">
+                    "I am committed to <span>changing the world</span> through the power of immersive storytelling in games and cutting-edge robotics. My goal is to build intelligent, interactive systems that solve human problems and inspire the next generation of creators."
+                </div>
+            </section>
+
+            <section class="section-wrap">
+                <h2 class="section-title">Featured Technical Projects</h2>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <span class="item-title">Student Helper Portal | Full-Stack Architect</span>
+                        <span class="item-meta">St Aloysius Engineering College</span>
+                    </div>
+                    <ul>
+                        <li><strong>Engineering Architecture:</strong> Designed a centralized productivity ecosystem using <strong>Python (Flask)</strong> and JSON state persistence to manage academic data flows.</li>
+                        <li><strong>Integrated Logic Engine:</strong> Engineered a custom in-browser <strong>Python compiler</strong> for real-time code testing and rapid logic execution.</li>
+                        <li><strong>Data Visualization:</strong> Automated academic resource tracking using <strong>pandas</strong> and <strong>Matplotlib</strong>, generating dynamic insights into subject-wise performance.</li>
+                        <li><strong>Cloud Deployment:</strong> Successfully hosted the application on <strong>Render</strong>, ensuring 24/7 global browser accessibility.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-wrap">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <span class="item-title">B.Tech in Computer Science & Engineering</span>
+                        <span class="item-meta">2025 — 2029</span>
+                    </div>
+                    <p style="color: #fff; font-weight: 600;">School of Engineering, St Aloysius (Deemed to be University)</p>
+                    <p style="font-size: 0.9em; color: var(--text-muted);">Focus: High-Performance Systems, AI Integration, and Autonomous Robotics.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <span class="item-title">Pre-University (1st & 2nd PU)</span>
+                        <span class="item-meta">Finished 2025</span>
+                    </div>
+                    <p style="color: #fff; font-weight: 600;">St Aloysius PU College | Mangalore</p>
+                    <p style="font-size: 0.9em; color: var(--text-muted);">Specialization in Science (PCMB) with a foundation in Logic and Physics.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <span class="item-title">Secondary School (SSLC)</span>
+                        <span class="item-meta">ICSE Board</span>
+                    </div>
+                    <p style="color: #fff; font-weight: 600;">St Theresa's School</p>
+                    <p style="font-size: 0.9em; color: var(--text-muted);">Academic foundation in analytical sciences and mathematics.</p>
+                </div>
+            </section>
+
+            <section class="section-wrap">
+                <h2 class="section-title">Professional Certifications</h2>
+                <div class="cert-grid">
+                    <div class="cert-card">Intro to Generative AI (Architecture)</div>
+                    <div class="cert-card">Intro to Large Language Models (LLM Logic)</div>
+                    <div class="cert-card">Microsoft Azure Cloud Fundamentals (AZ-900)</div>
+                    <div class="cert-card">Database Management System (DBMS) Mastery</div>
+                </div>
+            </section>
+
+            <div class="contact-footer">
+                <p>Ready to collaborate on the next generation of games or robotics?</p>
+                <a href="mailto:pintocyrus@gmail.com" class="btn-main">Get In Touch</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
